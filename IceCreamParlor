@@ -1,0 +1,43 @@
+import java.io.*;
+import java.util.*;
+import java.text.*;
+import java.math.*;
+import java.util.regex.*;
+
+// Print the index of two ice cream flavor price, which can be bought in given money.
+
+public class Solution {
+
+    public static void main(String[] args) {
+        /* Enter your code here. Read input from STDIN. Print output to STDOUT. Your class should be named Solution. */
+        
+        Scanner s = new Scanner(System.in);
+        
+        //number of trips
+        int T = s.nextInt();
+        for(int k=0;k<T;k++)
+            {
+            //total money
+        int m = s.nextInt();
+        //no. of flavors
+        int f = s.nextInt();
+        //price of each flavor
+        int[] price = new int[f];
+        for(int i=0;i<f;i++)
+            {
+            price[i] = s.nextInt();
+        }
+        for(int i=0;i<f;i++)
+            {
+            for(int j=i+1;j<f;j++)
+                {
+                if(price[i]+price[j]==m){
+                    int fi = i+1;
+                    int l = j+1;
+                    System.out.println(fi+" "+l);
+                }
+            }
+        }
+        }
+    }
+}
