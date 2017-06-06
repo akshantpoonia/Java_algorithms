@@ -1,0 +1,48 @@
+package geeks;
+
+import java.text.DateFormat;
+import java.text.SimpleDateFormat;
+import java.util.Date;
+import java.util.Scanner;
+
+// Compasrison between normal multiplication and multiplication using binary shift.
+
+public class MultiplicationComparison {
+	public static void main(String args[])
+	{
+	
+	Scanner sc = new Scanner(System.in);
+	int n = sc.nextInt();
+		
+	System.out.println("Normal multiplication");
+	
+	
+	Date d1 = new Date();
+
+	for(int i=0;i<n;i++)
+	{
+		long l = i * 2;
+	}
+	
+	Date d2 = new Date();
+	
+	
+	System.out.println(d2.getTime()-d1.getTime());
+	
+	System.out.println("shift Operator multiplication");
+	
+	Date d3 = new Date();
+
+	for(int i=0;i<n;i++)
+	{
+		long l = i << 2;
+	}
+	
+	Date d4 = new Date();
+	
+	
+	System.out.println(d4.getTime()-d3.getTime());
+
+	}
+
+}
